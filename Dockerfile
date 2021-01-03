@@ -71,10 +71,12 @@ RUN apt-get update && \
     ffmpeg \
     libpng-dev \
     libjpeg62-turbo-dev \
+    libpq-dev \
   && docker-php-ext-configure gd --with-jpeg-dir=/usr/include/ \
   && docker-php-ext-install \
     zip \
     pdo_mysql \
+    pdo_pgsql \
     exif \
     gd \
   && apt-get clean \
